@@ -13,3 +13,4 @@ proguard.cfg
 *.iws
 *.iml
 out
+target/
