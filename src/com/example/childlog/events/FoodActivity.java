@@ -21,14 +21,18 @@ public class FoodActivity extends Activity {
 
 		final EventsDataSource db = new EventsDataSource(context);
 		db.open();
-		db.createEvent("fooooooooood lewy cyœ");
+		db.createEvent("sen");
+		db.createEvent("pobudka");
+		db.createEvent("pielucha");
+		db.createEvent("kapiel");
+		db.createEvent("karmienie");
 		db.close();
 
 		Button bLewa = (Button) findViewById(R.id.bLewa);
 		bLewa.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				db.open();
-				db.createEvent("fooooooooood lewy cyœ");
+				db.createEvent("karmienie - lewa piers");
 				db.close();
 				Toast.makeText(context, "lewy cysiek", Toast.LENGTH_SHORT).show();
 			}
@@ -38,7 +42,7 @@ public class FoodActivity extends Activity {
 		bPrawa.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				db.open();
-				db.createEvent("fooooooooood prawy cyœ");
+				db.createEvent("karmienie - prawa piers");
 				db.close();
 				Toast.makeText(context, "prawy cysiek", Toast.LENGTH_SHORT).show();
 			}

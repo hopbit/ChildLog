@@ -10,6 +10,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.childlog.utils.DateTimeFormatter;
+
 public class EventsDataSource {
 
 	// Database fields
@@ -69,7 +71,9 @@ public class EventsDataSource {
 		private ChildEvent cursorToEvent(Cursor cursor) {
 			ChildEvent event = new ChildEvent();
 			event.setId(cursor.getLong(0));
-			event.setEventTime(new Timestamp(cursor.getLong(1)));
+			Timestamp ts = new Timestamp(cursor.getLong(1));
+			event.setEventTime(DateTimeFormatter.timestampToString(
+					ts, DateTimeFormatter.DATE_WITH_TIME));
 			event.setEventType(cursor.getString(2));
 			return event;
 		}	

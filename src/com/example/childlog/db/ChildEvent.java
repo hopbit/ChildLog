@@ -1,12 +1,11 @@
 package com.example.childlog.db;
 
-import java.sql.Timestamp;
 
 
 public class ChildEvent {
 
 	private Long id;
-	private Timestamp eventTime;
+	private String eventTime;
 	private String eventType;
 	public Long getId() {
 		return id;
@@ -14,10 +13,10 @@ public class ChildEvent {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Timestamp getEventTime() {
+	public String getEventTime() {
 		return eventTime;
 	}
-	public void setEventTime(Timestamp eventTime) {
+	public void setEventTime(String eventTime) {
 		this.eventTime = eventTime;
 	}
 	public String getEventType() {
